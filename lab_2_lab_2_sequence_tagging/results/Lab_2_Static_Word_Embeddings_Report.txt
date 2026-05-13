@@ -1,0 +1,45 @@
+LAB 2 — STATIC WORD EMBEDDINGS
+
+This laboratory focused on understanding and applying static word embeddings using different NLP libraries such as Gensim, NLTK and SpaCy.
+
+The first part of the lab explored pre-trained embeddings, specifically the GloVe “glove-wiki-gigaword-300” model. Different operations on embeddings were performed, including:
+
+- Loading pre-trained word vectors
+- Accessing words and vector representations
+- Computing cosine similarities
+- Finding semantically similar words
+- Evaluating embeddings using intrinsic evaluation benchmarks
+
+For the similarity task, the embeddings successfully identified semantically related words. For example:
+- “people” was associated with words such as “others”, “many”, and “thousands”
+- “women” was associated with “men”, “girls”, and “female”
+
+This demonstrates that the embedding space captures semantic relationships between words.
+
+The intrinsic evaluation on the MEN benchmark produced strong correlation scores between human similarity judgments and cosine similarities computed from embeddings:
+
+- Pearson Correlation ≈ 0.73
+- Spearman Correlation ≈ 0.74
+
+These results indicate that the pre-trained embeddings preserve meaningful semantic information.
+
+The second part of the lab focused on training custom Word2Vec embeddings using a COVID-19 social media dataset.
+
+Several preprocessing techniques were applied:
+- Lowercasing
+- Punctuation removal
+- Stopword removal
+- Lemmatization using SpaCy
+
+The preprocessing stage reduced noise and vocabulary sparsity while preserving semantic information.
+
+After preprocessing, a custom Word2Vec model was trained on the dataset. This allowed the generation of vector representations specialised for COVID-related terminology and social media language.
+
+Overall, the lab provided practical experience with:
+- Static word embeddings
+- Semantic similarity
+- Intrinsic evaluation metrics
+- Text preprocessing pipelines
+- Training custom Word2Vec models
+
+The experiments showed how embeddings can effectively capture semantic and contextual relationships between words while also demonstrating the importance of preprocessing and evaluation in NLP workflows.
