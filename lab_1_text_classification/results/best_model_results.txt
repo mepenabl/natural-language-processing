@@ -1,0 +1,8 @@
+Best Model: LinearSVC
+Vectorizer: CountVectorizer
+Parameters:
+- ngram_range=(1,2)
+- min_df=5
+- max_df=0.7
+
+Best Test Accuracy: 0.84167
