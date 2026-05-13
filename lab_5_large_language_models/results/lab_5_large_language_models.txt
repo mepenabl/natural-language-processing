@@ -1,0 +1,76 @@
+LAB 5 — LARGE LANGUAGE MODELS
+
+This laboratory focused on Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) systems for question answering over external knowledge bases.
+
+The project explored how modern language models can be combined with document retrieval techniques to improve factual accuracy and provide up-to-date information beyond the model’s original training data.
+
+The implementation was developed using:
+- LangChain
+- HuggingFace Transformers
+- Sentence Transformers
+- FAISS
+- PyTorch
+- Python
+
+The first part of the laboratory focused on evaluating the limitations of standalone language models without external knowledge sources.
+
+A recent topic related to the 2024 music industry was selected in order to test whether the language model could answer factual questions correctly without additional context.
+
+The experiments showed that the model produced confident but inaccurate answers regarding recent industry statistics. In particular, the model failed to correctly identify the region with the highest music market growth in 2024, demonstrating the limitations of pretrained knowledge in rapidly evolving domains.
+
+This motivated the use of a Retrieval-Augmented Generation (RAG) pipeline.
+
+The second part of the laboratory focused on building a custom knowledge base using external documents.
+
+The workflow included:
+- collecting relevant information sources
+- converting articles into PDF format
+- loading documents with PyPDFLoader
+- splitting documents into chunks
+- generating embeddings
+- storing embeddings in a FAISS vector database
+- retrieving relevant chunks for question answering
+
+Several chunking configurations were experimentally evaluated in order to analyse how chunk size and overlap affect retrieval quality and answer generation.
+
+The experiments compared different values for:
+- chunk_size
+- chunk_overlap
+
+The analysis showed that:
+- very small chunks may lose contextual information
+- excessively large chunks may exceed model token limits
+- moderate chunk sizes provide a better balance between semantic completeness and retrieval efficiency
+
+The configuration:
+- chunk_size = 300
+- overlap = 50
+
+provided the best trade-off between contextual coherence and compatibility with the embedding model.
+
+The experiments also highlighted several important observations:
+
+- retrieval quality strongly impacts final answer quality
+- chunk overlap improves contextual continuity
+- embedding truncation may degrade semantic retrieval
+- external knowledge bases significantly improve factual accuracy
+
+The laboratory additionally explored:
+- semantic search
+- vector similarity retrieval
+- embedding-based document indexing
+- prompt augmentation strategies
+
+The final RAG system successfully improved answer quality by grounding responses in retrieved external documents rather than relying solely on pretrained model knowledge.
+
+Overall, the laboratory provided practical experience with:
+- Large Language Models (LLMs)
+- Retrieval-Augmented Generation (RAG)
+- LangChain pipelines
+- vector databases
+- semantic retrieval
+- document chunking strategies
+- embedding generation
+- knowledge-grounded question answering
+
+The project demonstrated how combining retrieval systems with language models can significantly improve factual reliability and contextual understanding in modern NLP applications.
