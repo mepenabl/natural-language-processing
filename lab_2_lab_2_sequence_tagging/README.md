@@ -35,3 +35,14 @@ The project used the pre-trained model:
 
 ```text
 glove-wiki-gigaword-300
+```
+
+---
+
+## Repository Structure
+
+```text id="2o1q5n"
+lab_2_sequence_tagging/
+├── notebook/
+├── results/
+└── README.md
