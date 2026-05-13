@@ -48,3 +48,14 @@ Test Accuracy:
 
 ```text
 0.84167
+```
+
+---
+
+## Repository Structure
+
+```text id="2o1q5n"
+lab_1_text_classification/
+├── notebook/
+├── results/
+└── README.md
