@@ -34,3 +34,15 @@ The project used the pretrained:
 
 ```text
 gpt2
+```
+
+---
+
+## Repository Structure
+
+```text id="2o1q5n"
+lab_4_transformer_models/
+├── notebook/
+├── results/
+└── README.md
+
