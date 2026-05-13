@@ -1,0 +1,92 @@
+LAB 6 — RAG AND SEMANTIC RETRIEVAL
+
+This laboratory focused on Retrieval-Augmented Generation (RAG) systems and semantic retrieval techniques for improving question answering capabilities in Large Language Models.
+
+The project explored how external knowledge retrieval can be integrated with transformer-based language models in order to generate more reliable, contextualized, and factually grounded responses.
+
+The implementation was developed using:
+- LangChain
+- HuggingFace Transformers
+- Sentence Transformers
+- FAISS
+- PyTorch
+- Python
+
+The first part of the laboratory focused on semantic retrieval and vector-based document representations.
+
+The workflow included:
+- document collection and preprocessing
+- text segmentation into chunks
+- embedding generation
+- vector indexing with FAISS
+- semantic similarity search
+
+The experiments demonstrated how embeddings can be used to retrieve semantically relevant passages even when the query and the retrieved documents do not share identical keywords.
+
+Several embedding-based retrieval strategies were evaluated in order to analyse retrieval quality and contextual relevance.
+
+The laboratory also explored different chunking strategies for document processing.
+
+Different values for:
+- chunk_size
+- chunk_overlap
+
+were experimentally tested.
+
+The experiments showed that:
+- very small chunks reduce contextual coherence
+- large chunks increase computational cost
+- moderate chunk sizes improve semantic consistency and retrieval efficiency
+
+The selected configuration achieved a balanced trade-off between:
+- retrieval precision
+- contextual continuity
+- inference efficiency
+
+The second part of the laboratory focused on Retrieval-Augmented Generation (RAG).
+
+The implemented RAG pipeline combined:
+1. semantic retrieval
+2. vector similarity search
+3. contextual prompt construction
+4. answer generation using retrieved documents
+
+The retrieval stage allowed the system to:
+- access external information
+- reduce hallucinations
+- improve factual grounding
+- provide context-aware responses
+
+The experiments highlighted several important observations:
+
+- retrieval quality strongly affects generation quality
+- contextual grounding improves factual consistency
+- semantic embeddings improve information retrieval
+- chunk overlap helps preserve contextual continuity
+- vector databases enable scalable retrieval pipelines
+
+The project also analysed some limitations of RAG systems, including:
+- dependency on retrieval quality
+- sensitivity to chunk segmentation
+- embedding truncation issues
+- context window limitations
+
+Despite these limitations, the experiments demonstrated that RAG systems significantly improve the reliability of language models compared to standalone generation approaches.
+
+Overall, the laboratory provided practical experience with:
+- Retrieval-Augmented Generation (RAG)
+- semantic retrieval systems
+- vector databases
+- embedding generation
+- FAISS indexing
+- contextual question answering
+- transformer-based NLP pipelines
+- knowledge-grounded language generation
+
+The project demonstrated how modern NLP systems increasingly rely on the integration of:
+- retrieval mechanisms
+- semantic search
+- vector representations
+- Large Language Models
+
+to build scalable and reliable AI applications.
