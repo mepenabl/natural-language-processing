@@ -1,0 +1,74 @@
+LAB 3 — NATURAL LANGUAGE GENERATION
+
+This laboratory focused on Natural Language Generation (NLG) techniques using transformer-based language models, specifically GPT-2.
+
+The project explored how language models assign probabilities to tokens and how these probabilities can be used to analyse text quality and detect typographical errors.
+
+The implementation was developed using:
+- HuggingFace Transformers
+- PyTorch
+- NLTK
+- NumPy
+- Pandas
+
+The GPT-2 language model was loaded using the HuggingFace Transformers library and adapted with a custom BOS token for sentence processing. :contentReference[oaicite:0]{index=0}
+
+The first task consisted of computing the log-probability assigned to each token generated within a sentence. This required:
+- tokenizing the input sentence
+- extracting logits from the model
+- applying log-softmax
+- retrieving token-specific probabilities
+
+The implementation returned:
+- the list of tokens
+- the corresponding log-probabilities for each token
+
+The second task extended this idea by computing cumulative log-probabilities across the sentence. The cumulative score was obtained by sequentially summing token log-probabilities, allowing analysis of how sentence probability evolves token by token. :contentReference[oaicite:1]{index=1}
+
+The third part of the laboratory focused on typo detection using probability distributions produced by GPT-2.
+
+The hypothesis was:
+- unexpected or incorrect words generate strong probability drops
+- large negative transitions between consecutive token probabilities may indicate spelling errors
+
+A threshold-based typo detection system was implemented:
+- sentences were classified as correct or incorrect
+- the model compared probability differences between consecutive tokens
+- if the probability drop exceeded a threshold, the sentence was flagged as containing a typo
+
+Several threshold values were experimentally evaluated in order to optimise performance. :contentReference[oaicite:2]{index=2}
+
+The experiments showed that:
+- threshold selection strongly impacts performance
+- strict thresholds increase false positives
+- lenient thresholds reduce typo sensitivity
+
+The final system achieved an accuracy higher than 0.70 on the typo detection dataset. :contentReference[oaicite:3]{index=3}
+
+An error analysis was also conducted. The study highlighted several linguistic factors affecting detection quality:
+
+Features improving typo detection:
+- frequent words
+- grammatical structures
+- predictable sentence patterns
+
+Challenging cases included:
+- proper nouns
+- homophones
+- uncommon expressions
+- semantically incorrect but grammatically valid sentences
+
+The analysis concluded that threshold-based probability methods are useful as a baseline approach but are insufficient for fully robust typo detection systems. More advanced approaches should incorporate:
+- contextual reasoning
+- grammatical analysis
+- semantic understanding
+- specialised error detection systems
+
+Overall, the laboratory provided practical experience with:
+- transformer language models
+- GPT-2 inference
+- token probability analysis
+- cumulative log-probabilities
+- typo detection systems
+- NLP evaluation techniques
+- error analysis for language generation systems
