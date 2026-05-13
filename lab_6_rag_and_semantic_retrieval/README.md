@@ -70,4 +70,14 @@ The laboratory used:
 FAISS
 ```
 
+---
+
+## Repository Structure
+
+```text id="2o1q5n"
+lab_6_rag_and_semantic_retrieval/
+├── notebook/
+├── results/
+└── README.md
+
 
